@@ -75,6 +75,25 @@ const addProperty = function (property) {
   return Promise.resolve(property);
 };
 
+
+//Updadted add property function commented out. 
+
+// const addProperty = function (property) {
+//   const { title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, street, city, province, post_code, country, parking_spaces, number_of_bathrooms, number_of_bedrooms } = property;
+
+//   const values = [title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, street, city, province, post_code, country, parking_spaces, number_of_bathrooms, number_of_bedrooms];
+
+//   const queryString = `
+//     INSERT INTO properties (title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, street, city, province, post_code, country, parking_spaces, number_of_bathrooms, number_of_bedrooms)
+//     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
+//     RETURNING *;
+//   `;
+
+//   return pool.query(queryString, values)
+//     .then(res => res.rows[0])
+//     .catch(err => null);
+// };
+
 module.exports = {
   getUserWithEmail,
   getUserWithId,
